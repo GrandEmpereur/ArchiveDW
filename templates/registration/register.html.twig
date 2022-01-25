@@ -1,0 +1,37 @@
+{% extends 'base-connection.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1 class="title">S'inscrire</h1>
+
+    <div class="register">
+        {{ form_start(registrationForm) }}
+            <div class="input-form">
+                {{ form_row(registrationForm.email, {'attr': {'placeholder': 'email'}}) }}
+            </div>
+            <div class="input-form">
+                {{ form_row(registrationForm.plainPassword, {'attr': {'placeholder': 'motdepasse'}}, {label: 'Password'}) }}
+            </div>
+            <div class="input-form">
+                {{ form_row(registrationForm.name, {'attr': {'placeholder': 'name'}}) }}
+            </div>
+            <div class="input-form">
+                {{ form_row(registrationForm.git, {'attr': {'placeholder': 'git pseudo'}}) }}
+            </div>
+            <div class="content-row">
+                <p>association?</p>
+                {{ form_row(registrationForm.is_asso) }}
+            </div>
+            <div class="content-row">
+                <p>agree terms</p>
+                {{ form_row(registrationForm.agreeTerms) }}
+            </div>
+            <button type="submit" class="btn">Continuer</button>
+        {{ form_end(registrationForm) }}
+        <div class="content-column">
+            <a href="login">Nouveau ?</a>
+            <a href="/">Retourner sur le Site ?</a>
+        </div>
+    </div>
+{% endblock %}
