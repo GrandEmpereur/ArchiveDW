@@ -9,14 +9,28 @@
 ## maintenant tu dois créer ton env.local !
 ### copie l'actuel .env et colle le, puis renomme le ".env.local"
 #
+
 ## Seconde étape
+
 ### il faut que tu installes le composer Encore : 
     composer require symfony/webpack-encore-bundle
-### Ensuite, tu auras besoin de npm pour ce projet donc installe le dans celui-ci !
+
+### install npm
     npm install
-### pour compiler Encore avec npm c'est :
+
+#
+
+## Third Step
+
+### In your webpack.config.js
+uncomment //.enableSassLoader()
+
+### Now Install sass depedency in the project
+    npm install sass-loader@^12.0.0 sass --save-dev
+
+### Install bootstrap depedency
+    npm install bootstrap --save-dev
+
+### command for compile the project itself :
     npm run watch
 #
-## Style
-### commande pour interpréter le sass en local :
-    sass --watch assets/styles/app.scss:app.css
