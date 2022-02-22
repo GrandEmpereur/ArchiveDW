@@ -1,0 +1,41 @@
+.backgroundForm {
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/public/assets/bg-form.png);
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 47px;
+        .hidden{
+            display: none;
+        }
+        h1 {
+            font-size: 64px;
+            span {
+                color: var(--primary);
+            }
+        }
+        >input {
+            border: none;
+            height: 67px;
+            font-size: 24px;
+            border-radius: 10px;
+            width: 449px;
+            padding-left: 20px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+        }
+        button {
+            border: none;
+            background-color: var(--primary);
+            padding: 1em 2em;
+            border-radius: 10px;
+            p {
+                font-size: 24px;
+                color: var(--white);
+            }
+        }
+    }
+}
