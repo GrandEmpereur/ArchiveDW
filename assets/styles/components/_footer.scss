@@ -1,0 +1,40 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--black);
+    color: #fff;
+    padding: 50px 0;
+    .footer-informations {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h5 {
+            font-size: 24px;
+        }
+        .links-informations {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            p {
+                font-size: 12px;
+                span {
+                    color: var(--primary);
+                }
+                a {
+                    color: unset;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        >img {
+            width: 24px;
+            height: fit-content;
+        }
+    }
+}
