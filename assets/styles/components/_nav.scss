@@ -1,0 +1,11 @@
+nav, .btn-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+nav {
+  padding: 1rem 2rem;
+  margin-bottom: 40px;
+  align-items: center;
+}

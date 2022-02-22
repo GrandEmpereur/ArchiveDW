@@ -1,0 +1,10 @@
+.title {
+  font-size: 64px;
+  &:after {
+    content: ".";
+    color: var(--primary);
+  }
+}
+.subtitle {
+  font-size: 36px;
+}

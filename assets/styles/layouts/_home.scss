@@ -1,0 +1,49 @@
+.header-home {
+  padding: 0 4rem;
+}
+
+.header {
+  margin-bottom: 140px;
+}
+.container-slider {
+  margin: 0 auto;
+  width: 950px;
+  .subtitle {
+    text-align: end;
+    margin-bottom: 40px;
+  }
+}
+.btn-slider {
+  margin-bottom: 60px;
+  justify-content: center;
+  gap: 7px;
+}
+.img-slider {
+  width: 950px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: var(--black);
+  margin-bottom: 55px;
+}
+.sep-line {
+  margin: 0 auto;
+  width: 950px;
+}
+.container-explication {
+  padding: 3rem;
+  margin: 0 auto;
+  width: 950px;
+  justify-content: space-around;
+  align-items: center;
+}
+#logo-explication {
+  width: 160px;
+  height: 120px;
+}
+.mb-text {
+  margin-bottom: 20px;
+}
+.content-explication {
+  width: 500px;
+  font-size: 20px;
+}

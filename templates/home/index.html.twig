@@ -2,5 +2,30 @@
 
 {% block title %}Homepage{% endblock %}
 {% block body %}
-    <h1>Welcome</h1>
+    <div class="header-home">
+        <h1 class="title header">Welcome</h1>
+        <button class="btn" href="">go to projects.</button>
+    </div>
+    <div class="container-slider">
+        <h3 class="title subtitle">By Sorange</h3>
+        <div class="img-slider"></div>
+        <div class="btn-slider row">
+            <div class="circle-btn active"></div>
+            <div class="circle-btn"></div>
+            <div class="circle-btn"></div>
+        </div>
+    </div>
+    <hr class="sep-line">
+    <div class="container-explication row">
+        <div class="column">
+            <p class="mb-text content-explication">
+                CID is a global platform for all the students
+                who would like to upload their projects.
+                The goal is to create a global place to centralize them.
+            </p>
+            <p class="mb-text">Want to know more about us ?</p>
+            <button class="btn" href="">go to faq.</button>
+        </div>
+        <img id="logo-explication" src="{{ asset('assets/logo/cid_logo.png') }}" alt="logo cid">
+    </div>
 {% endblock %}
