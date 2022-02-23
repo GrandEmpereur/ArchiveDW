@@ -33,7 +33,7 @@ class Projects
     private $img;
 
     /**
-     * @Vich\UploadableField(mapping="imageproject", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="imageproject", fileNameProperty="img")
      * @var File
      */
 
@@ -66,7 +66,7 @@ class Projects
         return $this->img;
     }
 
-    public function setImg(string $img): self
+    public function setImg( $img): self
     {
         $this->img = $img;
 
