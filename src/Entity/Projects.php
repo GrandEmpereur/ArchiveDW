@@ -2,11 +2,16 @@
 
 namespace App\Entity;
 
+
 use App\Repository\ProjectsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ProjectsRepository::class)
+ * @Vich\Uploadable
  */
 class Projects
 {
@@ -26,6 +31,13 @@ class Projects
      * @ORM\Column(type="text")
      */
     private $img;
+
+    /**
+     * @Vich\UploadableField(mapping="imageproject", fileNameProperty="image")
+     * @var File
+     */
+
+    public $imageFile;
 
     /**
      * @ORM\Column(type="text")
@@ -59,6 +71,23 @@ class Projects
         $this->img = $img;
 
         return $this;
+    }
+
+    /**
+     * @return File/null
+     */
+    public function getImgFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File/null $imgFile
+     */
+    public function setImgFile(?File $imageFile = null)
+    {
+        $this->imageFile = $imageFile;
+
     }
 
     public function getDescription(): ?string
