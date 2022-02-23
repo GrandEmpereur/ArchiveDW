@@ -34,3 +34,8 @@ uncomment //.enableSassLoader()
 ### command for compile the project itself :
     npm run watch
 #
+
+### install vitch uploader bundle with composer
+
+    composer require vich/uploader-bundle
+
