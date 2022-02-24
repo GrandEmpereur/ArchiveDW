@@ -24,10 +24,11 @@ class ProjectsCrudController extends AbstractCrudController
         return [
             IntegerField::new('id', 'ID')->onlyOnIndex(),
             TextField::new('title'),
-            TextEditorField::new('description'),
+            TextEditorField::new('description')->hideOnIndex(),
             ImageField::new('imageFile')
                 ->setFormType(VichImageType::class)->onlyOnDetail(),
             ImageField::new('img')
+                ->setBasePath('uploads/images/')
                 ->setUploadDir('public/uploads/images'),
         ];
     }
