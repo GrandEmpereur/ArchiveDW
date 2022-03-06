@@ -11,8 +11,11 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
+
+
 class ProjectsCrudController extends AbstractCrudController
 {
+
     public static function getEntityFqcn(): string
     {
         return Projects::class;
