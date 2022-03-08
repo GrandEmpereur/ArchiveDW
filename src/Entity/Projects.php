@@ -44,6 +44,11 @@ class Projects
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $technos;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -98,6 +103,18 @@ class Projects
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getTechnos(): ?string
+    {
+        return $this->technos;
+    }
+
+    public function setTechnos(string $technos): self
+    {
+        $this->technos = $technos;
 
         return $this;
     }
