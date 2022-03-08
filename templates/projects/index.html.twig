@@ -12,9 +12,16 @@
 
 <div>
 
+{% for project in projects %}
 
-
-
+        <tr>
+                <td>{{ project.title }}</td>
+                <img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="projectpic">
+                <td>{{ project.description }}</td>
+        </tr>
+            
+        
+        {% endfor %}
 
 </div>
 
