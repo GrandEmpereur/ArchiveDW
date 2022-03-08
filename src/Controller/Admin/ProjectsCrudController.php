@@ -9,7 +9,9 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+
 
 
 
@@ -33,6 +35,10 @@ class ProjectsCrudController extends AbstractCrudController
             ImageField::new('img')
                 ->setBasePath('uploads/images/')
                 ->setUploadDir('public/uploads/images'),
+            ChoiceField::new('technos')
+            ->setChoices(['PHP' => 'PHP']),
+            
+            
         ];
     }
     
