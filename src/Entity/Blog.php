@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\BlogRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=BlogRepository::class)
@@ -34,11 +35,13 @@ class Blog
 
     /**
      * @ORM\Column(type="datetime")
+     * Gedmo\Timestampable(on: 'create')
      */
     private $created_at;
 
     /**
      * @ORM\Column(type="datetime")
+     * Gedmo\Timestampable(on: 'update')
      */
     private $updated_at;
 

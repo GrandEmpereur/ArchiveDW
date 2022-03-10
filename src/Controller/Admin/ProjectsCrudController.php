@@ -34,9 +34,17 @@ class ProjectsCrudController extends AbstractCrudController
                 ->setFormType(VichImageType::class)->onlyOnDetail(),
             ImageField::new('img')
                 ->setBasePath('uploads/images/')
-                ->setUploadDir('public/uploads/images'),
-            ChoiceField::new('technos')
-            ->setChoices(['PHP' => 'PHP']),
+                ->setUploadDir('public/uploads/images/')
+                ->setUploadedFileNamePattern('[randomhash].[extension]'),
+            ChoiceField::new('technos')->allowMultipleChoices()->setChoices([
+                    'PHP' => 'PHP',
+                    'JAVASCRIPT' => 'JAVASCRIPT',
+                    'CSS' => 'CSS',
+                    'RUBY' => 'RUBY',
+                    'JAVA' => 'JAVA',
+                    'SWIFT' => 'SWIFT',
+                    'PYTHON' => 'PYTHON',
+                ]),
             
             
         ];
