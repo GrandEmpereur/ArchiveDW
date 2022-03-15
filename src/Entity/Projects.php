@@ -45,9 +45,10 @@ class Projects
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="array")
+     * @var string[]
      */
-    private $technos;
+    private $technos = [];
 
     public function getId(): ?int
     {
@@ -107,12 +108,12 @@ class Projects
         return $this;
     }
 
-    public function getTechnos(): ?string
+    public function getTechnos(): ?array
     {
         return $this->technos;
     }
 
-    public function setTechnos(string $technos): self
+    public function setTechnos(array $technos): self
     {
         $this->technos = $technos;
 
