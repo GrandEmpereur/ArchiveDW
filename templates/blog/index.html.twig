@@ -9,12 +9,12 @@
 		{% for blog in blogs %}
 
 			<div>
-				<tr>
-					<td>{{ blog.title }}</td>
-					<td>{{ blog.text }}</td>
+				<div>
+					<h1>{{ blog.title }}</h1>
+					<p>{{ blog.text }}</p>
 					<img src="/uploads/blog/{{ blog.img }}" alt="projectpic">
-                    <td>{{ blog.link }}</td>
-				</tr>
+                    <a href="{{ blog.link }}">Detail</a>
+				</div>
 
 			</div>
 		{% endfor %}
