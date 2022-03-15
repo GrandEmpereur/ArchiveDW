@@ -5,7 +5,15 @@ nav, .btn-nav {
 }
 
 nav {
+  background-color: #fbfbfb;
   padding: 1rem 2rem;
   margin-bottom: 40px;
   align-items: center;
+
+  a {
+    color: black;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
