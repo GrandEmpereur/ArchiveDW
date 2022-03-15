@@ -33,7 +33,7 @@ class UserCrudController extends AbstractCrudController
                 'Administrator' => 'ROLE_ADMIN',
                 'User' => 'ROLE_USER',
             ]),
-            TextField::new('password'),
+            TextField::new('password')->hideOnIndex(),
             TextField::new('name')->hideOnIndex(),
             TextField::new('surname')->hideOnIndex(),
             IntegerField::new('grade'),

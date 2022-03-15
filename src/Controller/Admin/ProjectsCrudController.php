@@ -4,13 +4,14 @@ namespace App\Controller\Admin;
 
 
 use App\Entity\Projects;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
-use Vich\UploaderBundle\Form\Type\VichImageType;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 
 
@@ -29,7 +30,7 @@ class ProjectsCrudController extends AbstractCrudController
         return [
             IntegerField::new('id', 'ID')->onlyOnIndex(),
             TextField::new('title'),
-            TextEditorField::new('description')->hideOnIndex(),
+            TextareaField::new('description')->hideOnIndex(),
             ImageField::new('imageFile')
                 ->setFormType(VichImageType::class)->onlyOnDetail(),
             ImageField::new('img')
