@@ -35,7 +35,9 @@ uncomment //.enableSassLoader()
     npm run watch
 #
 
-### install vitch uploader bundle with composer
+### install vich uploader bundle with composer
 
     composer require vich/uploader-bundle
 
+### install stof
+composer require stof/doctrine-extensions-bundle
