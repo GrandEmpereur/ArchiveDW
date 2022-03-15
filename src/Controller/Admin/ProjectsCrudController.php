@@ -40,11 +40,17 @@ class ProjectsCrudController extends AbstractCrudController
             ChoiceField::new('technos')->allowMultipleChoices()->setChoices([
                     'PHP' => 'PHP',
                     'JAVASCRIPT' => 'JAVASCRIPT',
+                    'VUE JS' => 'VUE JS',
                     'CSS' => 'CSS',
                     'RUBY' => 'RUBY',
                     'JAVA' => 'JAVA',
                     'SWIFT' => 'SWIFT',
                     'PYTHON' => 'PYTHON',
+                    'TAILWIND CSS' => 'TAILWIND CSS',
+                    'REACT' => 'REACT',
+                    'HTML' => 'HTML',
+                    'LARAVEL' => 'LARAVEL',
+                    'SYMFONY' => 'SYMFONY',
                 ]),
             
             
