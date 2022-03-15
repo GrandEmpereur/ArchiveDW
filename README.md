@@ -39,5 +39,11 @@ uncomment //.enableSassLoader()
 
     composer require vich/uploader-bundle
 
+<<<<<<< Updated upstream
 ### install stof
 composer require stof/doctrine-extensions-bundle
+=======
+### install stof 
+
+    composer require stof/doctrine-extensions-bundle
+>>>>>>> Stashed changes

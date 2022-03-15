@@ -21,11 +21,11 @@
 					{% for techno in project.technos %}
 					<p>{{ techno }}</p>
 					{% endfor %}
+                    <span><a href=" {{ path('projects_show', {'id' : project.id}) }} ">More information</a></span>
 				</div>
 
 			</div>
 		{% endfor %}
-
 	</div>
 
 
