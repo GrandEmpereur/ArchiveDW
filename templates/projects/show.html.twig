@@ -16,6 +16,8 @@
                 <div class="col-lg-4">
                     <div class="box">
                         <h4>{{ project.title }}</h4>
+                        <img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="projectpic">
+                        <p>{{ project.description }}</p>
                     </div>
                 </div>
             </div>
