@@ -35,13 +35,13 @@ class Blog
 
     /**
      * @ORM\Column(type="datetime")
-     * Gedmo\Timestampable(on: 'create')
+     * @Gedmo\Timestampable(on="create")
      */
     private $created_at;
 
     /**
      * @ORM\Column(type="datetime")
-     * Gedmo\Timestampable(on: 'update')
+     * @Gedmo\Timestampable(on="update")
      */
     private $updated_at;
 

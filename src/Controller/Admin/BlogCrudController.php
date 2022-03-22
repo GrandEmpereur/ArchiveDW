@@ -24,8 +24,8 @@ class BlogCrudController extends AbstractCrudController
             TextField::new('title'),
             TextField::new('text'),
             ImageField::new('img')->setBasePath('uploads/blog/')->setUploadDir('public/uploads/blog/')->setUploadedFileNamePattern('[randomhash].[extension]'),
-            DateTimeField::new('createdAt'),
-            DateTimeField::new('updatedAt'),
+            DateTimeField::new('createdAt')->hideOnForm(),
+            DateTimeField::new('updatedAt')->hideOnForm(),
             TextField::new('link'),
             
         ];
