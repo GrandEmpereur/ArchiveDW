@@ -1,13 +1,17 @@
 .header-home {
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 #header-btn {
   margin-top: 50px;
 }
-.container-slider {
-  margin: 0 auto;
-  width: 950px;
+.container-projects-home {
+  display: flex;
+  justify-content: space-around;
+  @include xl {
+    flex-wrap: wrap;
+  }
   .subtitle {
     text-align: end;
     margin-bottom: 40px;
@@ -19,11 +23,15 @@
   gap: 7px;
 }
 .img-slider {
-  width: 950px;
+  width: 450px;
   height: 500px;
   border-radius: 10px;
   background-color: var(--black);
   margin-bottom: 55px;
+  @include xl{
+    width: 300px;
+    height: 400px;
+  }
 }
 .sep-line {
   margin: 0 auto;
