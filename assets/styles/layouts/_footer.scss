@@ -22,6 +22,11 @@ footer {
         p,a {
             font-size: 12px;
         }
+        a {
+            &:hover{
+                text-decoration: underline;
+            }
+        }
         span {
             color: var(--primary);
         }

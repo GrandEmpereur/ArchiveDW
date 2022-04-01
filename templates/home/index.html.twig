@@ -4,27 +4,30 @@
 {% block body %}
     <div class="header-home">
         <h1 class="title header">Welcome</h1>
-        <button class="btn" href="">go to projects.</button>
     </div>
-    <div class="container-projects-home">
-        <div class="column">
-            <h3 class="title subtitle">By Sorange</h3>
-            <div class="img-slider"></div>
+    <div class="container-home">
+        <div class="cards">
+            <div class="card-wrapper">
+                <!-- this item has to be dynamic -->
+                <h3 class="title subtitle">By Sorange</h3>
+                <div class="img-card"></div>
+            </div>
+            <div class="card-wrapper">
+                <h3 class="title subtitle">By Sorange</h3>
+                <div class="img-card"></div>
+            </div>
+            <div class="card-wrapper">
+                <h3 class="title subtitle">By Sorange</h3>
+                <div class="img-card"></div>
+            </div>
         </div>
-        <div class="column">
-            <h3 class="title subtitle">By Sorange</h3>
-            <div class="img-slider"></div>
-        </div>
-        <div class="column">
-            <h3 class="title subtitle">By Sorange</h3>
-            <div class="img-slider"></div>
-        </div>
+        <a class="btn" href="">go to projects.</a>
     </div>
-    <hr class="sep-line">
-    <div class="container-explication row">
+    <hr class="border">
+    <div class="container-explication">
         <div class="column">
             <p class="mb-text content-explication">
-                CID is a global platform for all the students
+                is a global platform for all the students
                 who would like to upload their projects.
                 The goal is to create a global place to centralize them.
             </p>
@@ -32,5 +35,21 @@
             <button class="btn" href="">go to faq.</button>
         </div>
         <img id="logo-explication" src="{{ asset('assets/logo/cid_logo.png') }}" alt="logo cid">
+    </div>
+    <div class="container-home dark">
+        <h2 class="title subtitle">Latest News</h2>
+        <div class="cards">
+            <div class="card-wrapper">
+                <!-- this item has to be dynamic -->
+                <div class="img-card"></div>
+            </div>
+            <div class="card-wrapper">
+                <div class="img-card"></div>
+            </div>
+            <div class="card-wrapper">
+                <div class="img-card"></div>
+            </div>
+        </div>
+        <a class="btn" href="">go to news.</a>
     </div>
 {% endblock %}

@@ -3,47 +3,52 @@
   margin: 0 auto;
   margin-bottom: 30px;
 }
-#header-btn {
-  margin-top: 50px;
-}
-.container-projects-home {
-  display: flex;
-  justify-content: space-around;
-  @include xl {
-    flex-wrap: wrap;
+
+//last projects div
+
+.container-home {
+  @include flex-column;
+  @include center-align;
+  margin-bottom: 30px;
+
+  .cards {
+    @include flex-wrap;
+    @include center-justify;
+    gap: 25px;
+    .card-wrapper {
+      width: max-content;
+      .subtitle {
+        padding:0.2em 0;
+        font-size: 1.5em;
+        font-weight: 400;
+      }
+      .img-card {
+        width: 300px;
+        height: 340px;
+        border-radius: 10px;
+        background-color: var(--black);
+        margin-bottom: 55px;
+      }
+    }
   }
-  .subtitle {
-    text-align: end;
-    margin-bottom: 40px;
-  }
 }
-.btn-slider {
-  margin-bottom: 60px;
-  justify-content: center;
-  gap: 7px;
-}
-.img-slider {
-  width: 450px;
-  height: 500px;
-  border-radius: 10px;
-  background-color: var(--black);
-  margin-bottom: 55px;
-  @include xl{
-    width: 300px;
-    height: 400px;
-  }
-}
-.sep-line {
+
+//
+.border {
   margin: 0 auto;
   width: 950px;
 }
+
+//who are we ?
 .container-explication {
+  @include flex-row;
+  @include center-align;
+  justify-content: space-around;
   padding: 3rem;
   margin: 0 auto;
   width: 950px;
-  justify-content: space-around;
-  align-items: center;
 }
+
 #logo-explication {
   width: 160px;
   height: 120px;
@@ -54,4 +59,29 @@
 .content-explication {
   width: 500px;
   font-size: 20px;
+  &:before {
+    content: "CID";
+    color: var(--primary);
+  }
+}
+
+//latest news
+
+.dark {
+  align-items: unset;
+  background-color: var(--black);
+  margin-bottom: 0;
+  .title {
+    width: 900px;
+    margin: 0 auto;
+    padding: 1em;
+    color: var(--white);
+  }
+  .cards {
+    .card-wrapper {
+      .img-card {
+        background-color: var(--white);
+      }
+    }
+  }
 }
