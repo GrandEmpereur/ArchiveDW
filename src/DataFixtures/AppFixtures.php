@@ -16,7 +16,10 @@ class AppFixtures extends Fixture
             $info = new Blog();
             $info->setTitle("The latest Symfony update and the new features.");
             $info->setImg("symfony_logo.webp");
-            $info->setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...");
+            $info->setText("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, deserunt, ipsam? Accusamus aliquid aut beatae consequatur doloremque in ipsa nemo, nesciunt, odio officiis quae quam saepe, tempore temporibus veniam veritatis?");
+            $info->setCreatedAt(date_create_immutable());
+            $info->setUpdatedAt(date_create_immutable());
+            $info->setLink("https://symfony.com/doc/current/index.html");
             $manager->persist($info);
         }
 
