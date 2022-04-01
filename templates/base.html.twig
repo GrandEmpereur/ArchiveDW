@@ -14,36 +14,8 @@
         {% endblock %}
     </head>
     <body>
-        <nav>
-            <img class="logo" src="{{ asset('assets/logo/cid_logo.png') }}" alt="logo cid">
-            <ul class="btn-nav">
-                <li><a href="{{ path('home') }}">home.</a></li>
-                <li><a>news.</a></li>
-                <li><a>projects.</a></li>
-                <li><a>faq.</a></li>
-            </ul>
-            <ul>
-                <li><a href="{{ path('app_login') }}">login.</a></li>
-            </ul>
-        </nav>
+        {% include 'partial/nav.html.twig' %}
         {% block body %}{% endblock %}
-        <footer class="row center-align">
-            <div class="f-container">
-                <h5>Non-profit project,<br>For the love of Coding and Digital Innovation</h5>
-                <div class="links-f row center-align">
-                    <p><span>© 2022 </span>| Lambda | All rights reserved</p>
-                    <a href="">privacy policy</a>
-                    <a href="">legal</a>    
-                    <a href="">terms of use</a> 
-                </div>
-            </div>
-            <div class="socials flex center-align">
-                <img src="/assets/logo/linkedin.png" alt="LinkedIn logo">
-                <img src="/assets/logo/twitter.png" alt="Twitter logo">
-                <img src="/assets/logo/instagram.png" alt="Instagram logo">
-                <img src="/assets/logo/tiktok.png" alt="Tiktok logo">
-                <img src="/assets/logo/Github.png" alt="Github logo">
-            </div>
-        </footer>
+        {% include 'partial/footer.html.twig' %}
     </body>
 </html>

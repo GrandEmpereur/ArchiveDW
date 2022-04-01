@@ -1,6 +1,5 @@
 nav, .btn-nav {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   gap: 50px;
 }
 
@@ -8,7 +7,7 @@ nav {
   background-color: #fbfbfb;
   padding: 1rem 2rem;
   margin-bottom: 40px;
-  align-items: center;
+  @include center-align;
 
   a {
     color: black;

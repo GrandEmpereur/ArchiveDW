@@ -1,4 +1,6 @@
 footer {
+    @include flex-row;
+    @include center-align;
     justify-content: space-around;
     background-color: var(--black);
     padding: 3rem;
@@ -13,6 +15,8 @@ footer {
         margin-bottom: 30px;
     }
     .links-f {
+        @include flex-row;
+        @include center-align;
         gap: 20px;
         width: 100%;
         p,a {
@@ -24,6 +28,7 @@ footer {
     }
 }
 .socials {
+    @include flex-center-align;
     gap: 20px;
     img {
         cursor: pointer;
