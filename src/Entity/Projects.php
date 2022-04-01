@@ -50,6 +50,11 @@ class Projects
      */
     private $technos = [];
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $urlType;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -116,6 +121,18 @@ class Projects
     public function setTechnos(array $technos): self
     {
         $this->technos = $technos;
+
+        return $this;
+    }
+
+    public function getUrlType(): ?string
+    {
+        return $this->urlType;
+    }
+
+    public function setUrlType(?string $urlType): self
+    {
+        $this->urlType = $urlType;
 
         return $this;
     }

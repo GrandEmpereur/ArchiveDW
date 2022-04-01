@@ -12,9 +12,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-
-
-
+use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 
 class ProjectsCrudController extends AbstractCrudController
 {
@@ -30,6 +29,7 @@ class ProjectsCrudController extends AbstractCrudController
         return [
             IntegerField::new('id', 'ID')->onlyOnIndex(),
             TextField::new('title'),
+            UrlField::new('urltype', 'Urltype'),
             TextareaField::new('description')->hideOnIndex(),
             ImageField::new('imageFile')
                 ->setFormType(VichImageType::class)->onlyOnDetail(),

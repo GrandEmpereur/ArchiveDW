@@ -22,9 +22,7 @@ class CommentariesCrudController extends AbstractCrudController
             IdField::new('id')->setDisabled(),
             TextEditorField::new('comment'),
             DateTimeField::new('created_at')->hideOnForm(),
-            DateTimeField::new('updated_at')->hideOnForm(),
-            
+            DateTimeField::new('updated_at')->hideOnForm(),            
         ];
     }
-    
 }
