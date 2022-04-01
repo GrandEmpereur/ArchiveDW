@@ -36,7 +36,12 @@ class ProjectsCrudController extends AbstractCrudController
             ImageField::new('img')
                 ->setBasePath('uploads/images/')
                 ->setUploadDir('public/uploads/images/')
-                ->setUploadedFileNamePattern('[randomhash].[extension]'),
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setFormTypeOptions([
+                    'attr' => [
+                        'accept' => 'image/jpg, image/jpeg, image/png, image/webp,'
+                    ]
+                    ]),
             ChoiceField::new('technos')->allowMultipleChoices()->setChoices([
                     'PHP' => 'PHP',
                     'JAVASCRIPT' => 'JAVASCRIPT',
