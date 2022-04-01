@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+	<div>
+
+		<h1>Welcome to Projects</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec finibus nunc. Aenean tristique blandit urna vel accumsan. Fusce id ante nec magna lacinia placerat. Ut ornare metus eget elementum aliquet. Aliquam maximus elit ac ex iaculis, non ullamcorper augue suscipit. Aliquam ornare velit est, eget ultricies ligula tempor pretium. Quisque fermentum malesuada odio sed cursus. Quisque ultrices facilisis lectus, tristique elementum nunc aliquet vitae. Proin feugiat dignissim erat, eu iaculis urna rhoncus eget. Nam vel justo eget augue pharetra pharetra ac quis eros. Vestibulum facilisis ipsum est. Vestibulum libero turpis, lobortis eu porttitor fringilla, elementum vitae ex. Suspendisse potenti. Nam tincidunt purus a mauris cursus, sit amet feugiat ex tincidunt. Pellentesque aliquet luctus fermentum.</p>
+	</div>
+
+	<div>
+
+		{% for project in projects %}
+
+			<div>
+				<div>
+					<h2>{{ project.title }}</h2>
+					<img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="projectpic">
+					<p>{{ project.description }}</p>
+					{% for techno in project.technos %}
+					<p>{{ techno }}</p>
+					{% endfor %}
+                    <span><a href=" {{ path('projects_show', {'id' : project.id}) }} ">More information</a></span>
+				</div>
+
+			</div>
+		{% endfor %}
+	</div>
+
+
+{% endblock %}
