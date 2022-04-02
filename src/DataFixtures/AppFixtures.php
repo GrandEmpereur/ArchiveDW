@@ -27,7 +27,8 @@ class AppFixtures extends Fixture
             $project->setTitle("Devlab");
             $project->setImg("symfony_logo.webp");
             $project->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...");
-            $project->setTechnos([]);
+            $project->setTechnos(["html.png", "javascript-fill.png", "php.png", "sass.png"]);
+            $project->setUrlType("https://canar.dev");
             $manager->persist($project);
         }
 
