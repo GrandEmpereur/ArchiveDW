@@ -22,6 +22,61 @@
                 </div>
             </div>
 
+            <div class="FormContent">
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+                {% for message in app.flashes('error') %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+                <div class="Commentaire--Liste">
+                    <h2>Liste des Commentaires</h2>
+                    <ul>
+                        {% for comment in project.commentaries %}
+                            {% if comment.parent == null %} 
+                                <div class="Commentaire--Contenu">
+                                    <div class="Commentaire--Contenu--Auteur">
+                                        <h3>Publié par {{ comment.username }}</h3>
+                                        <p>{{ comment.createdAt|date('d/m/Y') }}</p>
+                                    </div>
+                                    <div class="Commentaire--Contenu--Contenu">
+                                        <p>{{ comment.comment }}</p>
+                                        <span><a href="#ajout-commentaire" data-reply data-id="{{ comment.id }}"  >Répondre au commentaire</a></span>
+                                    </div>
+                                </div>
+                                {# Afficher les reponces  #}
+                                {% for reply in comment.replies %}
+                                    <div class="Commentaire--Contenu">
+                                        <div class="Commentaire--Contenu--Auteur">
+                                            <h3>Publié par {{ reply.username }}</h3>
+                                            <p>{{ reply.createdAt|date('d/m/Y') }}</p>
+                                        </div>
+                                        <div class="Commentaire--Contenu--Contenu">
+                                            <p>{{ reply.comment }}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="Commentaire--add" id="ajout-commentaire" >
+                    <h2>Ajouter un Commentaire</h2>
+                    {{ form(commentForm) }}
+                </div>
+            </div>
         </div>
     </section><!-- End Whu Us Section -->
+
+
+    <script src="/js/commentaire.js"></script>
+
+
 {% endblock %}
