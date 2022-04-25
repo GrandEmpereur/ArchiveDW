@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit your profile{% endblock %}
+
+{% block body %}
+<main class="base">
+    <h1>Edit Profile</h1>
+
+    {{ form_start(formEditP , {'attr': {'class': 'form_style'}}) }}
+        {{ form_widget(formEditP) }}
+        <button class="btn-submit">{{ button_label|default('Save') }}</button>
+    {{ form_end(formEditP) }}
+
+        <a href="{{ path('app_profiles') }}" class="btn-classic">Ton profil</a>
+</main>
+{% endblock %}
