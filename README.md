@@ -42,26 +42,40 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+You need to install Symfony.
 
 ```
-Give examples
+curl -sS https://get.symfony.com/cli/installer | bash
 ```
+
+You neet install Composer 
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running.
 
-Say what the step will be
+
 
 ```
-Give the example
+composer install
 ```
 
 And repeat
 
 ```
-until finished
+npm install
+```
+
+And repeat
+
+```
+npm install sass-loader@^12.0.0 sass --save-dev
+```
+
+And repeat
+
+```
+npm install bootstrap --save-dev
 ```
 
 End with an example of getting some data out of the system or using it for a little demo.

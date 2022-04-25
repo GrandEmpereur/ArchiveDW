@@ -4,6 +4,8 @@ namespace App\Entity;
 
 
 use App\Repository\ProjectsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\File;
@@ -54,6 +56,16 @@ class Projects
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $urlType;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Commentaries::class, mappedBy="project", orphanRemoval=true)
+     */
+    private $commentaries;
+
+    public function __construct()
+    {
+        $this->commentaries = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -133,6 +145,36 @@ class Projects
     public function setUrlType(?string $urlType): self
     {
         $this->urlType = $urlType;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Commentaries>
+     */
+    public function getCommentaries(): Collection
+    {
+        return $this->commentaries;
+    }
+
+    public function addCommentary(Commentaries $commentary): self
+    {
+        if (!$this->commentaries->contains($commentary)) {
+            $this->commentaries[] = $commentary;
+            $commentary->setProject($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentary(Commentaries $commentary): self
+    {
+        if ($this->commentaries->removeElement($commentary)) {
+            // set the owning side to null (unless already changed)
+            if ($commentary->getProject() === $this) {
+                $commentary->setProject(null);
+            }
+        }
 
         return $this;
     }
