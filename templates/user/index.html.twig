@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+Tous les profils
+
+{% for user in users %}
+    <p>{{ user.surname }}</p>
+{% endfor %}
+<a href="{{ path('app_profile', {'id': app.user.id}) }}">ton profil </a>
+{% endblock %}

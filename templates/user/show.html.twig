@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+UserProfile
+
+{% if is_granted('ROLE_USER') or is_granted('ROLE_ADMIN') %}
+    <p>Nom : {{ app.user.name }}</p>
+    <p>Prénom : {{ app.user.surname }}</p>
+    <p>E-mail : {{ app.user.email }}</p>
+    <p>Niveau d'étude : {{ app.user.grade }}</p>
+    <p>Votre profil git : {{ app.user.git }}</p>
+    {% if app.user.isasso > 0 %}
+        <p>Profil associatif : oui</p>
+        {% else %}
+        <p>Profil associatif : non</p>
+    {% endif %}
+    <a href="{{ path('app_profile_edit', {'id': app.user.id}) }}">Edit ton profil</a>
+{% endif %}
+<a href="{{ path('app_profiles') }}">La liste de tout les profiles</a>
+
+{% endblock %}
